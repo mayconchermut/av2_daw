@@ -22,8 +22,15 @@
             xhr.open("GET", API + USER);
             xhr.send();
         }
+        
+        function readid(id){
+            console.log(id);
+        }
     </script>
-
+    <form action="" method="post" name="Aluno" id="formAluno">
+        Nome: <input type="text" name="nome"> <br><br>
+    <input type="button" name="Submit" value="Submit" id="formsubmit" onClick="readid(id)">
+    </form>
     <div id="conteudo"> </div>
 </body>
 </html>
