@@ -20,8 +20,9 @@ background-image: linear-gradient(rgb(32, 108, 223), rgb(28, 197, 197));
   }
 }
 .d-flex{
+    
   display: flex;
-  flex-direction: row;
+  flex-direction: flex;
   background: #f6f6f6;
   border-radius: 0 0 5px 5px;
   padding: 25px;
@@ -39,13 +40,28 @@ form{
   padding: 20px;
   color: #ffffff;
 }
+
+
+.menucadastrar, .menubuscar, .menulistar{
+  display: inline-flex;
+  width: 27%;
+  background: -moz-linear-gradient(top left, #5195A8 0%, #70EAFF 100%);
+  background: -ms-linear-gradient(top left, #5195A8 0%, #70EAFF 100%);
+  background: -o-linear-gradient(top left, #5195A8 0%, #70EAFF 100%);
+  background: linear-gradient(to bottom right, #5195A8 0%, #70EAFF 100%);
+  border-radius:5px 5px 0 0 ;
+  padding: 20px;
+  color: #ffffff;
+
+}
+
 h2{
   margin: 0;
   padding-left: 15px; 
 }
 
 label, table{
-  display: block;
+  display: flex;
   margin: 15px;
 }
 label>span{
@@ -73,6 +89,7 @@ table{
   margin: 0;
   padding: 0;
 }
+
 th{
   border-bottom: 1px solid #dadada;
   padding: 10px 0;
@@ -91,7 +108,7 @@ td{
 }
 
 p{
-  display: block;
+  display: flex;
   color: #888;
   margin: 0;
   padding-left: 25px;
