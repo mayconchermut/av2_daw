@@ -1,10 +1,7 @@
 <?php
 session_start();
 
-  include 'connect.php';
-
-  $insertsql = "INSERT INTO `produtos`(`nome`, `codigobarra`, `fabricante`, `categoria`, `preco`, `quantidade`, `peso`, `descricao`, `linkimg`, `data`, `ativo`, `tipoprod`) 
-  VALUES ($nome,$cbarras,$fabricante,$categoria,$tipoprod,$precovenda,$qntdprod,$pesog,$desc,$urlimg,$indata,$situacao)";
+    include 'connect.php';
 
     
     $nome = filter_input(INPUT_POST, 'pname', FILTER_SANITIZE_STRING);
@@ -19,10 +16,26 @@ session_start();
     $urlimg = filter_input(INPUT_POST, 'urlimg', FILTER_SANITIZE_STRING);
     $indata = filter_input(INPUT_POST, 'indata', FILTER_SANITIZE_STRING);
     $situacao = filter_input(INPUT_POST, 'situacao', FILTER_SANITIZE_STRING);
+    if($situacao == "ativo"){
+        $situacao = true;
+    }else{
+        $situacao = false;
+    }
    
+    $insertsql = "INSERT INTO `produtos`(`nome`, `codigobarra`, `fabricante`, `categoria`, `tipoprod`, `preco`, `quantidade`, `peso`, `descricao`, `linkimg`, `data`, `ativo`) 
+    VALUES ('$nome',$cbarras,'$fabricante','$categoria','$tipoprod',$precovenda,$qntdprod,$pesog,'$desc','$urlimg','$indata',$situacao)";
 
-    echo"$nome";
-    echo"<br> Data: $indata";
-    echo"Situcao: $situacao";
+    // $insertsql = "INSERT INTO `produtos`(`nome`) VALUES ('$nome')";
 
+echo"$insertsql";
+// echo"$conn";
+echo"<br> Data: $indata";
+
+
+if ($conn->query($insertsql) === TRUE) {
+    echo "New record created successfully";
+  } else {
+    echo "Error: " . $insertsql . "<br>" . $conn->error;
+  }
+ 
   ?>

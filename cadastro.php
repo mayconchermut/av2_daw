@@ -78,7 +78,7 @@
           </label>
           <label>
             <span>Link da imagem</span>
-            <input type="url" name="urlimg"> 
+            <input type="text" name="urlimg"> 
           </label>
           <label>
             <span>Data da inclusão</span>
