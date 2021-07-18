@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <?php
+  // include 'cadastrar.php';
+  ?>
+
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
   
     <title>Cadastro Loja Ximbolé Bahiano</title>
 </head>
 <body>
+  
     <div class="container">
         <div calss="menu">
             <div class="menucadastrar">
-                Cadastrar
+                <a href="/av2_daw/cadastro.php">Cadastrar</a>
             </div>
             <div class="menubuscar">
-                <a href="?">Buscar</a> 
+                <a href="/av2_daw/buscar.html">Buscar</a> 
             </div>
             <div class="menulistar">
-               Listar
+               <a href="/av2_daw/lsitar.html">Listar</a> 
             </div>
         </div>
        
@@ -24,7 +29,7 @@
             <h2>Cadastro Loja Ximbolé Bahiano</h2>
         </div>
       <div class="d-flex">
-        <form action="" method="">
+        <form action="cadastrar.php" method="POST">
           <label>
             <span class="pname">Nome do produto</span>
             <input type="text" name="pname">

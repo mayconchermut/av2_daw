@@ -7,11 +7,25 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        var API = "/av2_daw/img/";
-        var USER = "teste2.png";
 
-        window.onload = function(){
+        <form  action="" method="get" name="Aluno" id="formAluno">        
+                Nome: <input type="text" name="nome" id="nomeform"> <br><br>
+
+            <input type="button" value="Enviar" name="Submit" id="formsubmit" onClick="readid()">
+        </form>
+        <div id="lol"></div>
+    <div id="conteudo"> </div>
+    <script>
+    
+        
+        function readid(){
+        
+            var USER2 = document.getElementById("nomeform");
+            var formsubmitt = document.getElementById("lol");
+            // formsubmitt.innerHTML =  '<p> '+pegarvalue.value+' </p>';
+            var API = "/av2_daw/img/";
+            console.log(API+USER2.value);
+            var USER = USER2.value;
             var xhr = new XMLHttpRequest();
             xhr.onreadystatechange = function() {
                 if(this.readyState == 4 && this.status == "200"){
@@ -21,16 +35,12 @@
             }
             xhr.open("GET", API + USER);
             xhr.send();
+            
         }
         
-        function readid(id){
-            console.log(id);
-        }
-    </script>
-    <form action="" method="post" name="Aluno" id="formAluno">
-        Nome: <input type="text" name="nome"> <br><br>
-    <input type="button" name="Submit" value="Submit" id="formsubmit" onClick="readid(id)">
-    </form>
-    <div id="conteudo"> </div>
+       
+
+     
+        </script>
 </body>
 </html>
