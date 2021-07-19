@@ -16,6 +16,7 @@
             if (this.readyState = 4 && this.status == 200){
                 var data = JSON.parse(this.responseText);
                 var html ="";
+                var html2 ="";
                 for(var a = 0; a< data.length; a++){
                     var nome = data[a].nome;
                     var codigobarra = data[a].codigobarra;
@@ -28,11 +29,16 @@
                         html += "<tr>";
                             html+= "<td> <a href='cadastro.php'> " + nome +  " </a></td> <td>" +codigobarra+ "</td><td>" +categoria+ "</td><td>" +preco+ "</td><td>" +estoque+ "</td>";
                         html+= "</tr>";
+                    }else{
+                        html2 += "<tr>";
+                            html2+= "<td> <a href='cadastro.php'> " + nome +  " </a></td> <td>" +codigobarra+ "</td><td>" +categoria+ "</td><td>" +preco+ "</td><td>" +estoque+ "</td>";
+                        html2+= "</tr>";
                     }
                     // console.log(html);
                 }   
             }
             document.getElementById("data").innerHTML = html ;
+            document.getElementById("data2").innerHTML = html2 ;
         }
 
     </script>
@@ -58,11 +64,11 @@
       <div class="d-flex-buscar">
           
             <!-- <button type="submit">Listar Produtos</button>      -->
-            <table>
-            </table>
+        
             <table class="tabelalistar">
-                
+              
                 <tr>
+                  
                     <th>Nome</th><th>Codigo</th><th>Categoria</th><th>Preço</th><th>Quantidade</th>
     
                 </tr>
@@ -71,6 +77,14 @@
                 
                 <tbody id="data">
                </tbody>
+            
+               <tr>
+                
+                <th>Nome</th><th>Codigo</th><th>Categoria</th><th>Preço</th><th>Quantidade</th>
+
+            </tr>
+               <tbody id="data2">
+            </tbody>
             </table>
        </div>
       </div>
