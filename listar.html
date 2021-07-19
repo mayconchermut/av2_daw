@@ -22,12 +22,13 @@
                     var categoria = data[a].categoria;
                     var preco = data[a].preco;
                     var estoque = data[a].quantidade;
-
+                    var ativo = data[a].ativo;
                     
-
-                    html += "<tr>";
-                        html+= "<td> <a href='cadastro.php'> " + nome +  " </a></td> <td>" +codigobarra+ "</td><td>" +categoria+ "</td><td>" +preco+ "</td><td>" +estoque+ "</td>";
-                    html+= "</tr>";
+                    if(ativo == 1){
+                        html += "<tr>";
+                            html+= "<td> <a href='cadastro.php'> " + nome +  " </a></td> <td>" +codigobarra+ "</td><td>" +categoria+ "</td><td>" +preco+ "</td><td>" +estoque+ "</td>";
+                        html+= "</tr>";
+                    }
                     // console.log(html);
                 }   
             }
