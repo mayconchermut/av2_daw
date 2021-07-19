@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+  
+    <title>Cadastro Loja Ximbolé Bahiano</title>
+    <script>
+        var xhr= new XMLHttpRequest();
+        var method ="GET";
+        var url = "listarproduto.php";
+
+        xhr.open(method, url);
+        xhr.send();
+        xhr.onreadystatechange = function(){
+            if (this.readyState = 4 && this.status == 200){
+                var data = JSON.parse(this.responseText);
+                var html ="";
+                for(var a = 0; a< data.length; a++){
+                    var nome = data[a].nome;
+                    var codigobarra = data[a].codigobarra;
+
+                    html += "<tr>";
+                        html+= "<td>" + nome + "</td>";
+                    html+= "</tr>";
+                    console.log(html);
+                }   
+            }
+            // html = document.getElementById("data").innerHTML ;
+        }
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div calss="menu">
+            <div class="menucadastrar">
+                <a href="/av2_daw/cadastro.html">Cadastrar</a>
+            </div>
+            <div class="menubuscar">
+                <a href="/av2_daw/buscar.html">Buscar</a> 
+            </div>
+            <div class="menulistar">
+               <a href="/av2_daw/listar.html">Listar</a> 
+            </div>
+        </div>
+       
+        <div class="title">
+            <h2>Cadastro Loja Ximbolé Bahiano</h2>
+        </div>
+      <div class="d-flex-buscar">
+            <!-- <button type="submit">Listar Produtos</button>      -->
+            <tbody id="data">
+
+
+            </tbody>
+       </div>
+      </div>
+    
+</body>
+</html>

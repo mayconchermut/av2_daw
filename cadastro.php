@@ -21,7 +21,7 @@
                 <a href="/av2_daw/buscar.html">Buscar</a> 
             </div>
             <div class="menulistar">
-               <a href="/av2_daw/lsitar.html">Listar</a> 
+               <a href="/av2_daw/listar.html">Listar</a> 
             </div>
         </div>
        

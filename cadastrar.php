@@ -16,6 +16,7 @@ session_start();
     $urlimg = filter_input(INPUT_POST, 'urlimg', FILTER_SANITIZE_STRING);
     $indata = filter_input(INPUT_POST, 'indata', FILTER_SANITIZE_STRING);
     $situacao = filter_input(INPUT_POST, 'situacao', FILTER_SANITIZE_STRING);
+    
     if($situacao == "ativo"){
         $situacao = true;
     }else{
