@@ -34,10 +34,18 @@ background-image: linear-gradient(rgb(32, 108, 223), rgb(28, 197, 197));
   border-radius: 0 0 5px 5px;
   padding: 25px;
 }
+.tabelalistar{
+  display: block;
+}
 form{
   flex: 4;
 }
-
+td>a{
+  color: #5195A8;
+}
+.nome{
+  background-color: #5195A8;
+}
 .title{
   background: -moz-linear-gradient(top left, #5195A8 0%, #70EAFF 100%);
   background: -ms-linear-gradient(top left, #5195A8 0%, #70EAFF 100%);

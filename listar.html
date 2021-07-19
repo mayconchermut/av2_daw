@@ -19,23 +19,29 @@
                 for(var a = 0; a< data.length; a++){
                     var nome = data[a].nome;
                     var codigobarra = data[a].codigobarra;
+                    var categoria = data[a].categoria;
+                    var preco = data[a].preco;
+                    var estoque = data[a].quantidade;
+
+                    
 
                     html += "<tr>";
-                        html+= "<td>" + nome + "</td>";
+                        html+= "<td> <a href='cadastro.php'> " + nome +  " </a></td> <td>" +codigobarra+ "</td><td>" +categoria+ "</td><td>" +preco+ "</td><td>" +estoque+ "</td>";
                     html+= "</tr>";
-                    console.log(html);
+                    // console.log(html);
                 }   
             }
-            // html = document.getElementById("data").innerHTML ;
+            document.getElementById("data").innerHTML = html ;
         }
 
     </script>
 </head>
 <body>
+    <a href=""></a>
     <div class="container">
         <div calss="menu">
             <div class="menucadastrar">
-                <a href="/av2_daw/cadastro.html">Cadastrar</a>
+                <a href="/av2_daw/cadastro.php">Cadastrar</a>
             </div>
             <div class="menubuscar">
                 <a href="/av2_daw/buscar.html">Buscar</a> 
@@ -49,11 +55,22 @@
             <h2>Cadastro Loja Ximbolé Bahiano</h2>
         </div>
       <div class="d-flex-buscar">
+          
             <!-- <button type="submit">Listar Produtos</button>      -->
-            <tbody id="data">
-
-
-            </tbody>
+            <table>
+            </table>
+            <table class="tabelalistar">
+                
+                <tr>
+                    <th>Nome</th><th>Codigo</th><th>Categoria</th><th>Preço</th><th>Quantidade</th>
+    
+                </tr>
+    
+                
+                
+                <tbody id="data">
+               </tbody>
+            </table>
        </div>
       </div>
     
