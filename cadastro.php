@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <?php
-  // include 'cadastrar.php';
-  ?>
+
 
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
@@ -18,10 +16,10 @@
                 <a href="/av2_daw/cadastro.php">Cadastrar</a>
             </div>
             <div class="menubuscar">
-                <a href="/av2_daw/buscar.html">Buscar</a> 
+                <a href="/av2_daw/buscar.php">Buscar</a> 
             </div>
             <div class="menulistar">
-               <a href="/av2_daw/listar.html">Listar</a> 
+               <a href="/av2_daw/listar.php">Listar</a> 
             </div>
         </div>
        
@@ -29,7 +27,8 @@
             <h2>Cadastro Loja Ximbolé Bahiano</h2>
         </div>
       <div class="d-flex">
-        <form action="cadastrar.php" method="POST">
+
+        <form action="cadastrar.php" method="POST" enctype="multipart/form-data">
           <label>
             <span class="pname">Nome do produto</span>
             <input type="text" name="pname">
@@ -77,8 +76,9 @@
             <input type="text" name="desc"> 
           </label>
           <label>
-            <span>Link da imagem</span>
-            <input type="text" name="urlimg"> 
+         
+            <span>Upload da imagem</span>
+              <input type="file" name="file"/>
           </label>
           <label>
             <span>Data da inclusão</span>
@@ -88,7 +88,7 @@
               <span>Ativar produto:</span>
               <input type="checkbox" id="situacaoprod" name="situacao" value="ativo">
             </label>
-            <button type="submit">Cadastrar</button>     
+            <button type="submit" name="acao">Cadastrar</button>     
         </form>
        </div>
       </div>

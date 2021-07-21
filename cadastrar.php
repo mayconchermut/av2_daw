@@ -27,16 +27,33 @@ session_start();
     VALUES ('$nome',$cbarras,'$fabricante','$categoria','$tipoprod',$precovenda,$qntdprod,$pesog,'$desc','$urlimg','$indata',$situacao)";
 
     // $insertsql = "INSERT INTO `produtos`(`nome`) VALUES ('$nome')";
+    if(isset($_POST['acao'])){
+        $arquivo = $_FILES['file'];
+        $codbarras = $cbarras;
+        $codbarras = $codbarras.'.jpg';
+       
+        
+        $arquivoNovo = explode('.', $arquivo['name']);
 
-echo"$insertsql";
+        if($arquivoNovo[sizeof($arquivoNovo)-1] != 'jpg'){
+            die('Você não pode fazer upload deste arquivo');
+        }else{
+            echo "Upload feito com sucesso";
+            move_uploaded_file($arquivo['tmp_name'], 'img/'.$codbarras);
+        }
+    }
+
 // echo"$conn";
-echo"<br> Data: $indata";
+
 
 
 if ($conn->query($insertsql) === TRUE) {
-    echo "New record created successfully";
+    echo "New record created successfully;";
+    header("Location: cadastro.php");
+
   } else {
+
     echo "Error: " . $insertsql . "<br>" . $conn->error;
   }
- 
+  
   ?>

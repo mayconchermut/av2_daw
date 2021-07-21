@@ -9,9 +9,6 @@ $conn = new mysqli($name, $user, $pass,$db);
 
 $insertsql = "INSERT INTO `produtos`(`nome`) VALUES ('Produto')";
 
-echo"$insertsql";
-// echo"$conn";
-echo"<br> Data: $indata";
 
 
 if ($conn->query($insertsql) === TRUE) {
