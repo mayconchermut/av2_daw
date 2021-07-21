@@ -48,7 +48,7 @@ session_start();
 
 if ($conn->query($insertsql) === TRUE) {
     echo "New record created successfully;";
-    header("Location: cadastro.php");
+    header("Location: buscar.php");
 
   } else {
 

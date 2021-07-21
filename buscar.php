@@ -4,19 +4,16 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
   
-    <title>Cadastro Loja Ximbolé Bahiano</title>
+    <title>Buscar Loja Ximbolé Bahiano</title>
     <script>
-
         var xhr= new XMLHttpRequest();
         var method ="GET";
         var url = "listarproduto.php";
-
         
         function listar(){
           const codigobarras = document.getElementById("codigodebarras").value;
   
           // console.log(codigobarras);
-
             xhr.open(method, url, true);
             xhr.send();
             xhr.onreadystatechange = function(){
@@ -24,7 +21,6 @@
                     var data = JSON.parse(this.responseText);
                     var html ="";
                     var html2 ="";
-
                     
                     for(var a = 0; a< data.length; a++){
                       var nome = data[a].nome;
@@ -47,27 +43,46 @@
                            html2+="</tr>";
 
                           html += "<tr>";
-                              html+= "<td> <a href='#' onclick='buscar("+codigobarra+")'> " + nome +  " </a></td> <td>" +codigobarra+ "</td><td>" +categoria+ "</td><td>" +preco+ "</td><td>" +estoque+ "</td><td>" +ativovalido+ "</td> <td> <img src='img/"+codigobarra+".jpg' width='50' height='50'> </td> <td><a href='#' onclick='buscar("+codigobarra+")'> Editar </a></td>";
+                              html+= `<td>  ` + nome +  ` </td> 
+                              <td>` +codigobarra+ `</td>
+                              <td>` +categoria+ `</td>
+                              <td>` +preco+ `</td>
+                              <td>` +estoque+ `</td>
+                              <td>` +ativovalido+ `</td> 
+                              <td> <img src='img/`+codigobarra+`.jpg' width='50' height='50'> </td> 
+                              <td><a href='#' onclick='buscar(`+codigobarra+`)'> Editar </a></td>
+                              <td><a href='#' onclick='desativar(`+codigobarra+`)'> Desativar </a> </td>`;
                           html+= "</tr>";
                         }
                         // console.log(html);
                     }  
-
                   }
                 document.getElementById("data2").innerHTML = html2 ;
                 document.getElementById("data").innerHTML = html ;
-
             }
             
             
           }
+          function desativar(e){
 
+            document.getElementById("detalhes").innerHTML = `<form action='desativar.php' method='POST' enctype='multipart/form-data'>
+          <label>
+          <span class='cbarras'>Codigo de barras</span>
+          <input type='text' name='cbarras' value='`+e+`'>
+          </label>
+          <label>
+            <span>Desativar produto:</span>
+            <input type="checkbox" id='situacaoprod' name='situacao' value='ativo'>
+            </label>
+            <button type='submit' name='acao'>Confirmar</button>     
+        </form>`
+          }
           function buscar(e){
             
             document.getElementById("detalhes").innerHTML = `<form action='editar.php' method='POST' enctype='multipart/form-data'>
           <label>
             <span class='pname'>Nome do produto</span>
-            <input type='text' name='pname'>
+            <input type='text' name='pname' >
           </label>
           <label>
             <span class='cbarras'>Codigo de barras</span>
@@ -82,7 +97,6 @@
             <select name='categoria'>
               <option value='select'>Selecione a categoria</option>
               <option value='AFG'>Afghanistan</option>
-
             </select>
           </label>
           <label>
@@ -96,7 +110,7 @@
           </label>
           <label>
             <span>Preço de venda</span>
-            <input type='text' name='precovenda' step='any'> 
+            <input type='text' name='precovenda' step='any' > 
           </label>
           <label>
             <span>Quantidade</span>
@@ -123,10 +137,9 @@
               <span>Ativar produto:</span>
               <input type="checkbox" id='situacaoprod' name='situacao' value='ativo'>
             </label>
-            <button type='submit' name='acao'>Cadastrar</button>     
+            <button type='submit' name='acao'>Editar</button>     
         </form>`;
           }
-
     </script>
 </head>
 <body>
@@ -146,17 +159,15 @@
         </div>
        
         <div class="title">
-            <h2>Cadastro Loja Ximbolé Bahiano</h2>
+            <h2>Buscar Loja Ximbolé Bahiano</h2>
         </div>
       <div class="d-flex-buscar">
         <input type="text" id="codigodebarras">
-        <button type="submit" onclick="listar()">Listar Produtos</button>     
-
+        <button type="submit" onclick="listar()">Buscar</button>     
             <table class="tabelalistar">
     
                 
                 <tbody id="data2">
-
                 </tbody>
                 <tbody id="data">
                </tbody>
@@ -164,11 +175,9 @@
                <tr>
                 
                 <!-- <th>Nome</th><th>Codigo</th><th>Categoria</th><th>Preço</th><th>Quantidade</th> -->
-
             </tr>
             </table>
             <div id="detalhes">
-
             </div>
        </div>
       </div>

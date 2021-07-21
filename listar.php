@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
   
-    <title>Cadastro Loja Ximbolé Bahiano</title>
+    <title>Listar Produtos Loja Ximbolé Bahiano</title>
     <script>
         var xhr= new XMLHttpRequest();
         var method ="GET";
@@ -71,7 +71,7 @@
         </div>
        
         <div class="title">
-            <h2>Loja Ximbolé Bahiano</h2>
+            <h2>Listar produtos Loja Ximbolé Bahiano</h2>
         </div>
       <div class="d-flex-buscar">
           
