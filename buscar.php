@@ -47,7 +47,7 @@
                            html2+="</tr>";
 
                           html += "<tr>";
-                              html+= "<td> <a href='#' onclick='buscar("+codigobarra+")'> " + nome +  " </a></td> <td>" +codigobarra+ "</td><td>" +categoria+ "</td><td>" +preco+ "</td><td>" +estoque+ "</td><td>" +ativovalido+ "</td> <td> <img src='img/"+codigobarra+".jpg' width='50' height='50'> </td>";
+                              html+= "<td> <a href='#' onclick='buscar("+codigobarra+")'> " + nome +  " </a></td> <td>" +codigobarra+ "</td><td>" +categoria+ "</td><td>" +preco+ "</td><td>" +estoque+ "</td><td>" +ativovalido+ "</td> <td> <img src='img/"+codigobarra+".jpg' width='50' height='50'> </td> <td><a href='#' onclick='buscar("+codigobarra+")'> Editar </a></td>";
                           html+= "</tr>";
                         }
                         // console.log(html);
@@ -64,7 +64,67 @@
 
           function buscar(e){
             
-            document.getElementById("detalhes").innerHTML = "<input type='text' name='pname' value='"+e+"'> ";
+            document.getElementById("detalhes").innerHTML = `<form action='cadastrar.php' method='POST' enctype='multipart/form-data'>
+          <label>
+            <span class='pname'>Nome do produto</span>
+            <input type='text' name='pname'>
+          </label>
+          <label>
+            <span class='cbarras'>Codigo de barras</span>
+            <input type='text' name='cbarras'>
+          </label>
+          <label>
+            <span>Fabricante</span>
+            <input type='text' name='fabricante'>
+          </label>
+          <label>
+            <span>Categoria</span>
+            <select name='categoria'>
+              <option value='select'>Selecione a categoria</option>
+              <option value='AFG'>Afghanistan</option>
+
+            </select>
+          </label>
+          <label>
+            <span>Tipo de produto</span>
+            <select name='tipoprod'>
+              <option value='select'>Selecione a categoria</option>
+              <option value='AFG'>Afghanistan</option>
+              <option value='ALA'>Åland Islands</option>
+              <option value='ALB'>Albania</option>
+            </select>
+          </label>
+          <label>
+            <span>Preço de venda</span>
+            <input type='text' name='precovenda' step='any'> 
+          </label>
+          <label>
+            <span>Quantidade</span>
+            <input type='number' name='qntdprod'> 
+          </label>
+          <label>
+            <span>Peso (gramas)</span>
+            <input type='text' name='pesog'> 
+          </label>
+          <label>
+            <span>Descrição</span>
+            <input type='text' name='desc'> 
+          </label>
+          <label>
+         
+            <span>Upload da imagem</span>
+              <input type='file' name='file'/>
+          </label>
+          <label>
+            <span>Data da inclusão</span>
+            <input type='date' name='indata'> 
+          </label>
+          <label>
+              <span>Ativar produto:</span>
+              <input type='checkbox' id='situacaoprod' name='situacao' value='ativo'>
+            </label>
+            <button type='submit' name='acao'>Cadastrar</button>     
+        </form>`;
           }
 
     </script>
