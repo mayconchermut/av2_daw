@@ -39,7 +39,7 @@
                             }
     
                             html += "<tr>";
-                                html+= "<td> <a href='buscar.php?cbarras="+codigobarra+"'> " + nome +  " </a></td> <td>" +codigobarra+ "</td><td>" +categoria+ "</td><td>" +preco+ "</td><td>" +estoque+ "</td><td>" +ativovalido+ "</td> <td> <img src='img/"+codigobarra+".jpg' width='50' height='50'> </td>";
+                                html+= "<td> " + nome +  "</td> <td>" +codigobarra+ "</td><td>" +categoria+ "</td><td>" +preco+ "</td><td>" +estoque+ "</td><td>" +ativovalido+ "</td> <td> <img src='img/"+codigobarra+".jpg' width='50' height='50'> </td>";
                             html+= "</tr>";
                         // console.log(html);
                     }   
