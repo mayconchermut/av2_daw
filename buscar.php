@@ -64,14 +64,14 @@
 
           function buscar(e){
             
-            document.getElementById("detalhes").innerHTML = `<form action='cadastrar.php' method='POST' enctype='multipart/form-data'>
+            document.getElementById("detalhes").innerHTML = `<form action='editar.php' method='POST' enctype='multipart/form-data'>
           <label>
             <span class='pname'>Nome do produto</span>
             <input type='text' name='pname'>
           </label>
           <label>
             <span class='cbarras'>Codigo de barras</span>
-            <input type='text' name='cbarras'>
+            <input type='text' name='cbarras' value='`+e+`'>
           </label>
           <label>
             <span>Fabricante</span>
@@ -121,7 +121,7 @@
           </label>
           <label>
               <span>Ativar produto:</span>
-              <input type='checkbox' id='situacaoprod' name='situacao' value='ativo'>
+              <input type="checkbox" id='situacaoprod' name='situacao' value='ativo'>
             </label>
             <button type='submit' name='acao'>Cadastrar</button>     
         </form>`;
