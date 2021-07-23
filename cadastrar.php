@@ -43,9 +43,6 @@ session_start();
     $insertsql = "INSERT INTO `produtos`(`nome`, `codigobarra`, `fabricante`, `categoria`, `tipoprod`, `preco`, `quantidade`, `peso`, `descricao`, `linkimg`, `data`, `ativo`) 
     VALUES ('$nome',$cbarras,'$fabricante','$categoria','$tipoprod',$precovenda,$qntdprod,$pesog,'$desc','$urlimg','$indata',$situacao)";
 
-    // $insertsql = "INSERT INTO `produtos`(`nome`) VALUES ('$nome')";
-
-
 
 
 if ($conn->query($insertsql) === TRUE) {

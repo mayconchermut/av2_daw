@@ -10,11 +10,6 @@ session_start();
    
     $insertsql = "UPDATE `produtos` SET `ativo`=false WHERE `codigobarra`=$cbarras";
 
-    // $insertsql = "INSERT INTO `produtos`(`nome`) VALUES ('$nome')";
-
-
-// echo"$conn";
-
 
 
 if ($conn->query($insertsql) === TRUE) {

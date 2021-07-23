@@ -13,7 +13,6 @@
         function listar(){
           const codigobarras = document.getElementById("codigodebarras").value;
   
-          // console.log(codigobarras);
             xhr.open(method, url, true);
             xhr.send();
             xhr.onreadystatechange = function(){
@@ -59,7 +58,6 @@
                               <td><a href='#' onclick='desativar(`+codigobarra+`)'> Desativar </a> </td>`;
                           html+= "</tr>";
                         }
-                        // console.log(html);
                     }  
                   }
                 document.getElementById("data2").innerHTML = html2 ;
@@ -183,7 +181,6 @@
             
                <tr>
                 
-                <!-- <th>Nome</th><th>Codigo</th><th>Categoria</th><th>Preço</th><th>Quantidade</th> -->
             </tr>
             </table>
             <div id="detalhes">

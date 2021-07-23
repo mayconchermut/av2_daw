@@ -41,7 +41,6 @@
                             html += "<tr>";
                                 html+= "<td> " + nome +  "</td> <td>" +codigobarra+ "</td><td>" +categoria+ "</td><td>" +preco+ "</td><td>" +estoque+ "</td><td>" +ativovalido+ "</td> <td> <img src='img/"+codigobarra+".jpg' width='50' height='50'> </td>";
                             html+= "</tr>";
-                        // console.log(html);
                     }   
                 }
                 document.getElementById("data2").innerHTML = html2 ;
@@ -87,9 +86,6 @@
                </tbody>
             
                <tr>
-                
-                <!-- <th>Nome</th><th>Codigo</th><th>Categoria</th><th>Preço</th><th>Quantidade</th> -->
-
             </tr>
             </table>
        </div>

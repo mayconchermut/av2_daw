@@ -25,7 +25,7 @@ session_start();
    
     $insertsql = "UPDATE `produtos` SET `nome`='$nome',`fabricante`='$fabricante',`categoria`='$categoria',`preco`=$precovenda,`quantidade`=$qntdprod,`peso`=$pesog,`descricao`='$desc',`data`='$indata',`ativo`='$situacao',`tipoprod`='$tipoprod' WHERE codigobarra = $cbarras";
 
-    // $insertsql = "INSERT INTO `produtos`(`nome`) VALUES ('$nome')";
+
     if(isset($_POST['acao'])){
         $arquivo = $_FILES['file'];
         $codbarras = $cbarras;
@@ -42,7 +42,6 @@ session_start();
         }
     }
 
-// echo"$conn";
 
 
 
