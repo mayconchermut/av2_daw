@@ -45,7 +45,7 @@
                       if(codigobarra == codigobarras){
                           html2+= "<tr>";
                                html2+= "<th>Nome</th><th>Codigo</th><th>Categoria</th><th>Preço</th><th>Quantidade</th> <th>Situação</th> <th>imagem</th>";
-                           html2+="</tr>";
+                          html2+="</tr>";
 
                           html += "<tr>";
                               html+= `<td>  ` + nome +  ` </td> 

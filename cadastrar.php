@@ -22,19 +22,16 @@ session_start();
     }else{
         $situacao = false;
     }
-   
-    $insertsql = "INSERT INTO `produtos`(`nome`, `codigobarra`, `fabricante`, `categoria`, `tipoprod`, `preco`, `quantidade`, `peso`, `descricao`, `linkimg`, `data`, `ativo`) 
-    VALUES ('$nome',$cbarras,'$fabricante','$categoria','$tipoprod',$precovenda,$qntdprod,$pesog,'$desc','$urlimg','$indata',$situacao)";
 
-    // $insertsql = "INSERT INTO `produtos`(`nome`) VALUES ('$nome')";
     if(isset($_POST['acao'])){
         $arquivo = $_FILES['file'];
         $codbarras = $cbarras;
         $codbarras = $codbarras.'.jpg';
+        $urlimg = 'img/'.$codbarras;
        
         
         $arquivoNovo = explode('.', $arquivo['name']);
-
+    
         if($arquivoNovo[sizeof($arquivoNovo)-1] != 'jpg'){
             die('Você não pode fazer upload deste arquivo');
         }else{
@@ -42,6 +39,11 @@ session_start();
             move_uploaded_file($arquivo['tmp_name'], 'img/'.$codbarras);
         }
     }
+   
+    $insertsql = "INSERT INTO `produtos`(`nome`, `codigobarra`, `fabricante`, `categoria`, `tipoprod`, `preco`, `quantidade`, `peso`, `descricao`, `linkimg`, `data`, `ativo`) 
+    VALUES ('$nome',$cbarras,'$fabricante','$categoria','$tipoprod',$precovenda,$qntdprod,$pesog,'$desc','$urlimg','$indata',$situacao)";
+
+    // $insertsql = "INSERT INTO `produtos`(`nome`) VALUES ('$nome')";
 
 
 
