@@ -47,7 +47,7 @@ session_start();
 
 
 if ($conn->query($insertsql) === TRUE) {
-    echo "New record created successfully;";
+    echo "<script type='javascript'>alert('Email enviado com Sucesso!');";
     header("Location: cadastro.php");
 
   } else {

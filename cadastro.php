@@ -44,7 +44,7 @@
           <label>
             <span>Categoria</span>
             <select name="categoria">
-              <option value="select">Selecione a categoria</option>
+              <option value="select">Selecione o Tipo</option>
               <option value="Categoria1">Categoria1</option>
               <option value="Categoria2">Categoria2</option>
               <option value="Categoria3">Categoria3</option>
@@ -55,7 +55,7 @@
           <label>
             <span>Tipo de produto</span>
             <select name="tipoprod">
-              <option value="select">Selecione a categoria</option>
+              <option value="select">Selecione a Categoria</option>
               <option value="Tipo1">Tipo1</option>
               <option value="Tipo2">Tipo2</option>
               <option value="Tipo3">Tipo3</option>

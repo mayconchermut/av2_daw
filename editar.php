@@ -50,9 +50,11 @@ if ($conn->query($insertsql) === TRUE) {
     echo "New record created successfully;";
     header("Location: buscar.php");
 
+
   } else {
 
     echo "Error: " . $insertsql . "<br>" . $conn->error;
   }
   
+
   ?>
