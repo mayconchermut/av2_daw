@@ -43,7 +43,6 @@ session_start();
         }
     }
 
-// echo"$conn";
 
 
 
@@ -52,7 +51,7 @@ if ($conn->query($insertsql) === TRUE) {
     header("Location: cadastro.php");
 
   } else {
-
+    header("Location: cadastro.php");
     echo "Error: " . $insertsql . "<br>" . $conn->error;
   }
   

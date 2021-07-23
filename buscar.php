@@ -99,16 +99,22 @@
             <span>Categoria</span>
             <select name='categoria' >
               <option value='select'>`+categoria+`</option>
-              <option value='AFG'>Afghanistan</option>
+              <option value="Categoria1">Categoria1</option>
+              <option value="Categoria2">Categoria2</option>
+              <option value="Categoria3">Categoria3</option>
+              <option value="Categoria4">Categoria4</option>
+              <option value="Categoria5">Categoria5</option>
             </select>
           </label>
           <label>
             <span>Tipo de produto</span>
             <select name='tipoprod'>
               <option value='select'>`+tipoprod+`</option>
-              <option value='AFG'>Afghanistan</option>
-              <option value='ALA'>Åland Islands</option>
-              <option value='ALB'>Albania</option>
+              <option value="Tipo1">Tipo1</option>
+              <option value="Tipo2">Tipo2</option>
+              <option value="Tipo3">Tipo3</option>
+              <option value="Tipo4">Tipo4</option>
+              <option value="Tipo5">Tipo5</option>
             </select>
           </label>
           <label>

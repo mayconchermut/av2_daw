@@ -7,14 +7,3 @@ $db = "av2daw";
 
 $conn = new mysqli($name, $user, $pass,$db);
 
-$insertsql = "INSERT INTO `produtos`(`nome`) VALUES ('Produto')";
-
-
-
-if ($conn->query($insertsql) === TRUE) {
-    echo "New record created successfully";
-  } else {
-    echo "Error: " . $insertsql . "<br>" . $conn->error;
-  }
-
-?>
