@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
   
-    <title>Cadastro Loja Ximbolé Bahiano</title>
+    <title>Cadastro da Loja Ximbolé Bahiano</title>
 </head>
 <body>
   
