@@ -7,3 +7,4 @@ $db = "av2daw";
 
 $conn = new mysqli($name, $user, $pass,$db);
 
+?>
