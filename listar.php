@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
   
-    <title>Listar Produtos Loja Ximbolé Bahiano</title>
+    <title>Lista de produtos Loja Ximbolé Bahiano</title>
     <script>
         var xhr= new XMLHttpRequest();
         var method ="GET";
